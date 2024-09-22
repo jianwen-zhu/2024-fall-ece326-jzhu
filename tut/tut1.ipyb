@@ -1,0 +1,501 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "aR3Af3MwwCrM"
+      },
+      "outputs": [],
+      "source": [
+        "from IPython.core.display import display, HTML\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# HTML"
+      ],
+      "metadata": {
+        "id": "CZB9pII9YTie"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## HTML Heading"
+      ],
+      "metadata": {
+        "id": "uUmL1Q0GgSzT"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "display(HTML('<h1>Hello, world!</h1>'))\n",
+        "display(HTML('<h2>Hello, world!</h2>'))\n",
+        "display(HTML('<h3>Hello, world!</h3>'))\n",
+        "display(HTML('<h4>Hello, world!</h4>'))\n",
+        "display(HTML('<h5>Hello, world!</h5>'))\n",
+        "display(HTML('<h6>Hello, world!</h6>'))"
+      ],
+      "metadata": {
+        "id": "EPCEZ6LKwFD6"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## HTML Paragraph"
+      ],
+      "metadata": {
+        "id": "eghUnI_LgsMR"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "display(HTML('<p> This is a paragraph</p>'))"
+      ],
+      "metadata": {
+        "id": "OuJe9MeKg9SI"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## HTML Image"
+      ],
+      "metadata": {
+        "id": "NK2tuwpehX1r"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "logo_addr = \"https://lh3.googleusercontent.com/zw9dJAOfPdGj6nLVMGJQeuTEPFft-3i9yzshOxG5N7H2BCWwAwPaWsYYMDpXn_4KrdClYuOH8YSDGqW4_u5quLi2zXpvIZUSdtsd8ubxYVuXwvURxQ\"\n",
+        "display(HTML(f'<img src=\"{logo_addr}\"> </img>'))\n"
+      ],
+      "metadata": {
+        "id": "_CzBSDSthanR"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "display(HTML(f'<img src=\"{logo_addr}\" width=300 height=500 alt=\"android\"> </img>'))"
+      ],
+      "metadata": {
+        "id": "HXzZp7ogimlO"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## HTML List"
+      ],
+      "metadata": {
+        "id": "wLfZ5h6BjfVI"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Unordered List"
+      ],
+      "metadata": {
+        "id": "r5-teFDLlhyp"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "apple = \"<li> apple </li>\"\n",
+        "banana = \"<li> banana </li>\"\n",
+        "orange = \"<li> orange </li>\"\n",
+        "ul = f'<ul> {apple} {banana} {orange}</ul>'\n",
+        "display(HTML(ul))"
+      ],
+      "metadata": {
+        "id": "NGBskS34jkli"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Ordered List"
+      ],
+      "metadata": {
+        "id": "7SPK_xeQlsyX"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "apple = \"<li> apple </li>\"\n",
+        "banana = \"<li> banana </li>\"\n",
+        "orange = \"<li> orange </li>\"\n",
+        "ol = f'<ol> {apple} {banana} {orange}</ol>'\n",
+        "display(HTML(ol))"
+      ],
+      "metadata": {
+        "id": "xgXbELtLkUE9"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Description List"
+      ],
+      "metadata": {
+        "id": "LzYd4FgWlwWI"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "apple = \"<dt> apple </dt>\"\n",
+        "apple_description = \"<dd> A round fruit of a tree of the rose family </dd>\"\n",
+        "banana = \"<dt> banana </dt>\"\n",
+        "banana_description = \"<dd> A long curve fruit that grows in clusters </dd>\"\n",
+        "orange = \"<dt> orange </dt>\"\n",
+        "orange_description = \"<dd> A round juicy cirtus fruit with a bright reddish-yellow rind </dd>\"\n",
+        "dl = f'<dl> {apple} {apple_description} {banana} {banana_description} {orange} {orange_description} </dl>'\n",
+        "display(HTML(dl))"
+      ],
+      "metadata": {
+        "id": "b0Z8CIL5kuxH"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## HTML Link"
+      ],
+      "metadata": {
+        "id": "IedPn0oDnCat"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "link = \"<a href='https://www.google.ca'> Google Link </a>\"\n",
+        "display(HTML(link))"
+      ],
+      "metadata": {
+        "id": "GTwJ04Y5nGMA"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "link = f\"<a href='https://www.google.ca'> <img src={logo_addr}> </img></a>\"\n",
+        "display(HTML(link))"
+      ],
+      "metadata": {
+        "id": "SLNY3xo8ndOC"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## HTML Form"
+      ],
+      "metadata": {
+        "id": "MSd3ul1Vovpy"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "firstname =\"<label> firstname: </label>\"\n",
+        "text_in = \"<input type='text'></input>\"\n",
+        "form = f\"<form> {firstname} {text_in} </form>\"\n",
+        "display(HTML(form))"
+      ],
+      "metadata": {
+        "id": "7ilkkdTsow48"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "password =\"<label> password: </label>\"\n",
+        "text_in = \"<input type='password' name='pw'></input>\"\n",
+        "form = f\"<form> {password} {text_in} </form>\"\n",
+        "display(HTML(form))"
+      ],
+      "metadata": {
+        "id": "R7DBnDwFpxk1"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "button = \"<input type='submit'></input>\"\n",
+        "form = f\"<form> {button} </form>\"\n",
+        "display(HTML(form))"
+      ],
+      "metadata": {
+        "id": "whImx81lqgtU"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# CSS"
+      ],
+      "metadata": {
+        "id": "UzAjOYporRoH"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Inline"
+      ],
+      "metadata": {
+        "id": "KWRxCOmctCZs"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "css = 'font-size:300%'\n",
+        "h1 = f'<h1 style={css}> H1 Heading with CSS </h1>'\n",
+        "display(HTML(h1))\n",
+        "h1 = f'<h1> H1 Heading without CSS </h1>'\n",
+        "display(HTML(h1))"
+      ],
+      "metadata": {
+        "id": "GB8HZy_YrSxC"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Internal"
+      ],
+      "metadata": {
+        "id": "0vtTQBVDtEOc"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "head = \"<head> <style> h1 {color:blue} </style></head>\"\n",
+        "head1 = \"<h1> Head 1 </h1>\"\n",
+        "head2 = \"<h1> Head 2</h1>\"\n",
+        "head3 = \"<h2> Head 3</h2>\"\n",
+        "body = f\"<body> {head1} {head2} {head3} </body>\"\n",
+        "html = f\"{head} {body}\"\n",
+        "\n",
+        "display(HTML(html))"
+      ],
+      "metadata": {
+        "id": "tJ2xkN_3r-Gs"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## External"
+      ],
+      "metadata": {
+        "id": "9kEvO62zu6-K"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "text = '''<!DOCTYPE html>\n",
+        "<html lang=\"en\">\n",
+        "<head>\n",
+        "  <title>Bootstrap Example</title>\n",
+        "  <meta charset=\"utf-8\">\n",
+        "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n",
+        "  <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css\">\n",
+        "  <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js\"></script>\n",
+        "  <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js\"></script>\n",
+        "</head>\n",
+        "<body>\n",
+        "\n",
+        "<div class=\"jumbotron text-center\">\n",
+        "  <h1>My First Bootstrap Page</h1>\n",
+        "  <p>Resize this responsive page to see the effect!</p>\n",
+        "</div>\n",
+        "\n",
+        "<div class=\"container\">\n",
+        "  <div class=\"row\">\n",
+        "    <div class=\"col-sm-4\">\n",
+        "      <h3>Column 1</h3>\n",
+        "      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>\n",
+        "      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>\n",
+        "    </div>\n",
+        "    <div class=\"col-sm-4\">\n",
+        "      <h3>Column 2</h3>\n",
+        "      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>\n",
+        "      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>\n",
+        "    </div>\n",
+        "    <div class=\"col-sm-4\">\n",
+        "      <h3>Column 3</h3>\n",
+        "      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>\n",
+        "      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>\n",
+        "    </div>\n",
+        "  </div>\n",
+        "</div>\n",
+        "\n",
+        "</body>\n",
+        "</html>'''\n",
+        "display(HTML(text))"
+      ],
+      "metadata": {
+        "id": "dv-buj31t5hi"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Div"
+      ],
+      "metadata": {
+        "id": "lrurv6VuT7Hw"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "p = '<p> A paragraph</p>'\n",
+        "h2 = '<h2> h2 list </h2>'\n",
+        "ul = '<ul> <li> apple </li>  <li> banana </li> </ul>'\n",
+        "div_str = f'<div id=\"nav\">{p} {h2} {ul}</div>'\n",
+        "display(HTML(div_str))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 131
+        },
+        "id": "oLs5DBBbO3Hv",
+        "outputId": "3f26da6f-1d7f-4585-83b7-929e6553af94"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/plain": [
+              "<IPython.core.display.HTML object>"
+            ],
+            "text/html": [
+              "<div id=\"nav\"><p> A paragraph</p> <h2> h2 list </h2> <ul> <li> apple </li>  <li> banana </li> </ul></div>"
+            ]
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "head = '<head> <style> #nav{color:blue} </style></head>'\n",
+        "body = f'{head} <body>{div_str}</body>'\n",
+        "display(HTML(body))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 131
+        },
+        "id": "7RuwqxwsPjfw",
+        "outputId": "15a70dab-21e7-4e80-9ea2-6870974d1b15"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/plain": [
+              "<IPython.core.display.HTML object>"
+            ],
+            "text/html": [
+              "<head> <style> #nav{color:blue} </style></head> <body><div id=\"nav\"><p> A paragraph</p> <h2> h2 list </h2> <ul> <li> apple </li>  <li> banana </li> </ul></div></body>"
+            ]
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Class"
+      ],
+      "metadata": {
+        "id": "pAh4rRrST_P3"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "intro_class = '.intro {color:blue}'\n",
+        "important_class = '.important {color:red}'\n",
+        "head = f'<head> <style> {intro_class} {important_class} </style></head>'\n",
+        "h1_class = f'<h1 class=\"intro\"> Head with class</h1>'\n",
+        "p_class = f'<p class=\"intro\"> Paragraph with class</p>'\n",
+        "p_class2 = f'<p class=\"important\"> Another paragraph with class</p>'\n",
+        "body = f'{head} <body> {h1_class} {p_class} {p_class2}</body>'\n",
+        "display(HTML(body))"
+      ],
+      "metadata": {
+        "id": "2Vkcc81SUAUs"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
